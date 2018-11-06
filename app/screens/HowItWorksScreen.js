@@ -172,7 +172,7 @@ const styles = StyleSheet.create({
         width: w / 2,
     },
     description: {
-        fontFamily: 'Segoe UI',
+        fontFamily: 'Comfortaa-Regular',
         fontSize: 13,
         textAlign: 'center',
         width: w / 2,
