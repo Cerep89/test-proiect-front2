@@ -19,7 +19,7 @@ export default class MenuScreen extends React.Component {
                     <Icon
                         name="ios-close"
                         color="#fff"
-                        size={30}
+                        size={36}
                         style={{ marginRight: 10 }}
                     />
                 </TouchableOpacity>
