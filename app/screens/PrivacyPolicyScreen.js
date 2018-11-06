@@ -10,18 +10,21 @@ export default class PrivacyPolicyScreen extends React.Component {
     static navigationOptions = ({ navigation }) => {
         return {
             headerTransparent: true,
+            headerTintColor: '#fff',
             headerRight: (
                 <TouchableOpacity
                     onPress={() => navigation.navigate('Home')}
+                    style={{ padding: 10 }}
                 >
                     <Icon
                         name="ios-close"
                         color="#fff"
-                        size={25}
+                        size={30}
                         style={{ marginRight: 10 }}
                     />
                 </TouchableOpacity>
             ),
+        
         }
     }
 
@@ -93,6 +96,7 @@ const styles = StyleSheet.create({
         marginTop: 50
     },
     text: {
+        fontFamily: 'Comfortaa-Regular',
         fontSize: 18,
         color: '#fff',
         lineHeight: 25,

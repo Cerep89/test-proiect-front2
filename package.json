@@ -27,8 +27,7 @@
   "rnpm": {
     "assets": 
     [
-      "./app/assets/fonts/Comfortaa", 
-      "./app/assets/fonts/Segoe UI"
+      "./app/assets/fonts/Comfortaa" 
     ]
    }
 }

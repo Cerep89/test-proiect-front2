@@ -11,20 +11,18 @@ export default class InfoScreen extends React.Component {
       headerTransparent: true,
       headerTintColor: '#fff',
       headerRight: (
-        <TouchableOpacity
-          onPress={() => navigation.navigate('Menu')}
-          style={{
-            paddingVertical: 10,
-            paddingHorizontal: 20
-          }}
-        >
-          <Icon
-            name="ios-menu"
-            color="#fff"
-            size={30}
-          />
-        </TouchableOpacity>
-      ),
+                <TouchableOpacity
+                    onPress={() => navigation.navigate('Menu')}
+                    style={{ padding: 10 }}
+                >
+                    <Icon
+                        name="ios-menu"
+                        color="#fff"
+                        size={30}
+                        style={{ marginRight: 10 }}
+                    />
+                </TouchableOpacity>
+            ),
     }
   }
 

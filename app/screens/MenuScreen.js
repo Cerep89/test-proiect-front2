@@ -13,8 +13,8 @@ export default class MenuScreen extends React.Component {
             headerTintColor: '#fff',
             headerRight: (
                 <TouchableOpacity
-                    style={{ padding: 10}}
                     onPress={() => navigation.navigate('Home')}
+                    style={{ padding: 10 }}
                 >
                     <Icon
                         name="ios-close"
@@ -56,11 +56,15 @@ export default class MenuScreen extends React.Component {
                         <Text style={text}> Cum Funcționează </Text>
                     </TouchableOpacity>
 
-                    <TouchableOpacity>
+                    <TouchableOpacity
+                        onPress={() => this.props.navigation.navigate('PrivacyPolicy')}
+                    >
                         <Text style={text}> Despre Bagaboo </Text>
                     </TouchableOpacity>
 
-                    <TouchableOpacity>
+                    <TouchableOpacity
+                        onPress={() => this.props.navigation.navigate('PrivacyPolicy')}
+                    >
                         <Text style={text}> Contacte </Text>
                     </TouchableOpacity>
 
@@ -70,14 +74,10 @@ export default class MenuScreen extends React.Component {
                         <Text style={text}> Privacy Policy </Text>
                     </TouchableOpacity>
 
-                    <TouchableOpacity>
-                        <Text style={text}> Ieșire </Text>
-                    </TouchableOpacity>
-
                 </View>
 
                 <TouchableOpacity
-                    onPress={() => this.props.navigation.navigate('Home')}
+                    onPress={() => this.props.navigation.navigate('Camera')}
                 >
                     <LinearGradient
                         start={{ x: 0, y: 0 }}

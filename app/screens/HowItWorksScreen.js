@@ -49,14 +49,16 @@ export default class MyCarousel extends React.Component {
     static navigationOptions = ({ navigation }) => {
         return {
             headerTransparent: true,
+            headerTintColor: '#fff',
             headerRight: (
                 <TouchableOpacity
-                    onPress={() => navigation.navigate('Menu')}
+                    onPress={() => navigation.navigate('Home')}
+                    style={{ padding: 10 }}
                 >
                     <Icon
-                        name="ios-menu"
+                        name="ios-close"
                         color="#fff"
-                        size={25}
+                        size={30}
                         style={{ marginRight: 10 }}
                     />
                 </TouchableOpacity>
@@ -123,6 +125,7 @@ export default class MyCarousel extends React.Component {
                         renderItem={this._renderItem}
                         onSnapToItem={(index) => this.setState({ activeSlide: index })}
                         firstItem={SLIDER_FIRST_ITEM}
+                        removeClippedSubviews={false}
 
                         sliderWidth={w}
                         itemWidth={w / 1.4}

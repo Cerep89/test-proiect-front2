@@ -10,10 +10,11 @@ export default class GangScreen extends React.Component {
     static navigationOptions = ({ navigation }) => {
         return {
             headerTransparent: true,
+            headerTintColor: '#fff',
             headerRight: (
                 <TouchableOpacity
-                    style={{ padding: 10 }}
                     onPress={() => navigation.navigate('Home')}
+                    style={{ padding: 10 }}
                 >
                     <Icon
                         name="ios-close"

@@ -38,6 +38,7 @@ export default class HomeScreen extends React.Component {
     static navigationOptions = ({ navigation }) => {
         return {
             headerTransparent: true,
+            headerTintColor: '#fff',
             headerLeft: (
                 <TouchableOpacity
                     onPress={() => navigation.navigate('Language')}
@@ -53,11 +54,12 @@ export default class HomeScreen extends React.Component {
             headerRight: (
                 <TouchableOpacity
                     onPress={() => navigation.navigate('Menu')}
+                    style={{ padding: 10 }}
                 >
                     <Icon
                         name="ios-menu"
                         color="#fff"
-                        size={25}
+                        size={30}
                         style={{ marginRight: 10 }}
                     />
                 </TouchableOpacity>
