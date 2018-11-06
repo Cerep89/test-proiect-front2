@@ -127,7 +127,7 @@ const styles = StyleSheet.create({
         fontSize: 16,
         fontFamily: 'Comfortaa-Regular',
         color: '#fff',
-        marginVertical: 15
+        marginVertical: 10
     },
     button: {
         flexWrap: 'wrap',
