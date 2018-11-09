@@ -10,6 +10,8 @@ import GangScreen from './app/screens/GangScreen';
 import CameraScreen from './app/screens/CameraScreen';
 import InfoScreen from './app/screens/InfoScreen';
 
+import SplashScreen from 'react-native-splash-screen'
+
 
 const RootStack = StackNavigator(
   {
@@ -44,6 +46,11 @@ const RootStack = StackNavigator(
 );
 
 export default class App extends React.Component {
+
+  componentDidMount() {
+      SplashScreen.hide();
+  }
+
   render() {
     return <RootStack />;
   }
