@@ -42,13 +42,17 @@ const RootStack = StackNavigator(
   },
   {
     initialRouteName: 'Home',
+    navigationOptions: {
+      headerTransparent: true,
+      headerTintColor: '#fff',
+    }
   }
 );
 
 export default class App extends React.Component {
 
   componentDidMount() {
-      SplashScreen.hide();
+    SplashScreen.hide();
   }
 
   render() {
