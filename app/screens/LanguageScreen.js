@@ -6,13 +6,15 @@ import LinearGradient from 'react-native-linear-gradient';
 export default class LanguageScreen extends React.Component {
 
   render() {
+
     const { languages, buttonsContainer, button, languageText } = styles
+
     return (
       <LinearGradient colors={['#F59052', '#F3339B']} style={languages}>
         <View style={buttonsContainer}>
 
           <TouchableOpacity
-            onPress={() => this.props.navigation.navigate('Home')}
+            onPress={() => this.props.navigation.navigate('Home', { lang: 'ro' })}
           >
             <LinearGradient start={{ x: 0, y: 0 }} end={{ x: 1, y: 0.8 }} colors={['#E80D3D', '#C22EEE']} style={button}>
               <Text style={languageText}> Română  </Text>
@@ -20,7 +22,7 @@ export default class LanguageScreen extends React.Component {
           </TouchableOpacity>
 
           <TouchableOpacity
-            onPress={() => this.props.navigation.navigate('Home')}
+            onPress={() => this.props.navigation.navigate('Home', { lang: 'en' })}
           >
             <LinearGradient start={{ x: 0, y: 0 }} end={{ x: 1, y: 0.8 }} colors={['#E6280D', '#F8BF22']} style={button}>
               <Text style={languageText}> English </Text>
@@ -28,7 +30,7 @@ export default class LanguageScreen extends React.Component {
           </TouchableOpacity>
 
           <TouchableOpacity
-            onPress={() => this.props.navigation.navigate('Home')}
+            onPress={() => this.props.navigation.navigate('Home', { lang: 'ru' })}
           >
             <LinearGradient start={{ x: 0, y: 0.2 }} end={{ x: 1, y: 0.75 }} colors={['#4B14FE', '#830CEC']} style={button}>
               <Text style={languageText}> Русский </Text>

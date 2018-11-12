@@ -4,6 +4,8 @@ import LinearGradient from 'react-native-linear-gradient';
 import Icon from "react-native-vector-icons/Ionicons";
 import { w, h } from '../constants';
 
+import lang from '../localization/lang';
+
 
 export default class MenuScreen extends React.Component {
 
@@ -45,31 +47,31 @@ export default class MenuScreen extends React.Component {
                     <TouchableOpacity
                         onPress={() => this.props.navigation.navigate('Gang')}
                     >
-                        <Text style={text}> Gașca Ta </Text>
+                        <Text style={text}> {lang.menu.gang} </Text>
                     </TouchableOpacity>
 
                     <TouchableOpacity
                         onPress={() => this.props.navigation.navigate('HowItWorks')}
                     >
-                        <Text style={text}> Cum Funcționează </Text>
+                        <Text style={text}> {lang.menu.howItWorks} </Text>
                     </TouchableOpacity>
 
                     <TouchableOpacity
                         onPress={() => this.props.navigation.navigate('PrivacyPolicy')}
                     >
-                        <Text style={text}> Despre Bagaboo </Text>
+                        <Text style={text}> {lang.menu.about} </Text>
                     </TouchableOpacity>
 
                     <TouchableOpacity
                         onPress={() => this.props.navigation.navigate('PrivacyPolicy')}
                     >
-                        <Text style={text}> Contacte </Text>
+                        <Text style={text}> {lang.menu.contact} </Text>
                     </TouchableOpacity>
 
                     <TouchableOpacity
                         onPress={() => this.props.navigation.navigate('PrivacyPolicy')}
                     >
-                        <Text style={text}> Privacy Policy </Text>
+                        <Text style={text}>{lang.menu.privacyPolicy} </Text>
                     </TouchableOpacity>
 
                 </View>
@@ -83,7 +85,7 @@ export default class MenuScreen extends React.Component {
                         colors={['#F53A69', '#DB52DF']}
                         style={button}>
                         <Text
-                            style={{ color: '#ffffff', fontFamily: 'Comfortaa-Regular', fontSize: 20 }}> Scanează Eticheta </Text>
+                            style={{ color: '#ffffff', fontFamily: 'Comfortaa-Regular', fontSize: 20 }}> {lang.home.button.scan} </Text>
                     </LinearGradient>
                 </TouchableOpacity>
 

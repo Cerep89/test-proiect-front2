@@ -1,40 +1,42 @@
 import React from 'react';
-import { Button, View, Text, StyleSheet, Image, TouchableOpacity, Share, Platform } from 'react-native';
+import { View, Text, StyleSheet, Image, TouchableOpacity, Share, Platform } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import Icon from "react-native-vector-icons/Ionicons";
 import { w, h } from '../constants';
 
+import lang from '../localization/lang';
 
 export default class HomeScreen extends React.Component {
 
     onClick() {
         Share.share({
-          ...Platform.select({
-            ios: {
-              message: 'Have a look on : ',
-              url: 'link spre app'//this.props.url,
-            },
-            android: {
-              message: 'Have a look on : \n' + 'youtube.com'//this.props.url
-            }
-          }),
-          title: 'Wow, did you see that?'
+            ...Platform.select({
+                ios: {
+                    message: 'Have a look on : ',
+                    url: 'link spre app'//this.props.url,
+                },
+                android: {
+                    message: 'Have a look on : \n' + 'youtube.com'//this.props.url
+                }
+            }),
+            title: 'Wow, did you see that?'
         }, {
-          ...Platform.select({
-            ios: {
-              // iOS only:
-              excludedActivityTypes: [
-                'com.apple.UIKit.activity.PostToTwitter'
-              ]
-            },
-            android: {
-              // Android only:
-              dialogTitle: 'Distribuie aplicatia Bagaboo'//this.props.title
-            }
-          })
-        });
-      }
+                ...Platform.select({
+                    ios: {
+                        // iOS only:
+                        excludedActivityTypes: [
+                            'com.apple.UIKit.activity.PostToTwitter'
+                        ]
+                    },
+                    android: {
+                        // Android only:
+                        dialogTitle: 'Distribuie aplicatia Bagaboo'//this.props.title
+                    }
+                })
+            });
+    }
 
+    //header
     static navigationOptions = ({ navigation }) => {
         return {
             headerLeft: (
@@ -66,7 +68,16 @@ export default class HomeScreen extends React.Component {
     }
 
     render() {
+
+        const { navigation } = this.props;
+        const lng = navigation.getParam('lang');
+
+        if (lng !== undefined) {
+            lang.setLanguage(lng);
+        }
+
         const { body, imageContainer, buttonsContainer, button, textButton } = styles
+
         return (
 
             <LinearGradient colors={['#5994CB', '#6427A5']} style={body}>
@@ -82,7 +93,7 @@ export default class HomeScreen extends React.Component {
                         onPress={() => this.props.navigation.navigate('Camera')}
                     >
                         <LinearGradient start={{ x: 0, y: 0 }} end={{ x: 1, y: 0 }} colors={['#5DF188', '#0DAE68']} style={button}>
-                            <Text style={ textButton }> Scanează Eticheta </Text>
+                            <Text style={textButton}> {lang.home.button.scan} </Text>
                         </LinearGradient>
                     </TouchableOpacity>
 
@@ -90,16 +101,16 @@ export default class HomeScreen extends React.Component {
                         onPress={() => this.props.navigation.navigate('Gang')}
                     >
                         <LinearGradient start={{ x: 0, y: 0 }} end={{ x: 1, y: 0 }} colors={['#F53A69', '#DB52DF']} style={button}>
-                            <Text style={ textButton }> Gașca Ta </Text>
+                            <Text style={textButton}> {lang.home.button.gang} </Text>
                         </LinearGradient>
                     </TouchableOpacity>
 
 
                     <TouchableOpacity
-                    onPress={() => { this.onClick(); }}
+                        onPress={() => { this.onClick(); }}
                     >
                         <LinearGradient start={{ x: 0, y: 0 }} end={{ x: 1, y: 0 }} colors={['#B030DE', '#6B34DE', '#5A47DC']} style={button}>
-                            <Text style={ textButton }> Distribuie Aplicaţia </Text>
+                            <Text style={textButton}> {lang.home.button.share} </Text>
                         </LinearGradient>
                     </TouchableOpacity>
 
@@ -118,8 +129,8 @@ const styles = StyleSheet.create({
         alignContent: 'center',
     },
     imageContainer: {
-        width: w, 
-        height: h / 2, 
+        width: w,
+        height: h / 2,
         flexDirection: 'row',
         flexWrap: 'wrap',
         justifyContent: 'center',
