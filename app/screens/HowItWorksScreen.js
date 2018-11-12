@@ -48,8 +48,6 @@ export default class MyCarousel extends React.Component {
 
     static navigationOptions = ({ navigation }) => {
         return {
-            headerTransparent: true,
-            headerTintColor: '#fff',
             headerRight: (
                 <TouchableOpacity
                     onPress={() => navigation.navigate('Home')}

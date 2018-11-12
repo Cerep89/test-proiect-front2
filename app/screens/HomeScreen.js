@@ -37,8 +37,6 @@ export default class HomeScreen extends React.Component {
 
     static navigationOptions = ({ navigation }) => {
         return {
-            headerTransparent: true,
-            headerTintColor: '#fff',
             headerLeft: (
                 <TouchableOpacity
                     onPress={() => navigation.navigate('Language')}

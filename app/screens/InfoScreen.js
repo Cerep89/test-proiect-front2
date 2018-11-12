@@ -8,8 +8,6 @@ export default class InfoScreen extends React.Component {
 
   static navigationOptions = ({ navigation }) => {
     return {
-      headerTransparent: true,
-      headerTintColor: '#fff',
       headerRight: (
                 <TouchableOpacity
                     onPress={() => navigation.navigate('Menu')}

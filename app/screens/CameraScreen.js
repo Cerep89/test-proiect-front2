@@ -18,8 +18,6 @@ export default class CameraScreen extends React.Component {
 
     static navigationOptions = ({ navigation }) => {
         return {
-            headerTransparent: true,
-            headerTintColor: '#fff',
             headerRight: (
                 <TouchableOpacity
                     onPress={() => navigation.navigate('Menu')}

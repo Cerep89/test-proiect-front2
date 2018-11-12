@@ -5,11 +5,6 @@ import LinearGradient from 'react-native-linear-gradient';
 
 export default class LanguageScreen extends React.Component {
 
-  static navigationOptions = {
-    headerTransparent: true,
-    headerTintColor: '#fff' 
-  }
-
   render() {
     const { languages, buttonsContainer, button, languageText } = styles
     return (
